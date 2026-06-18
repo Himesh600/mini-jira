@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://mini-jira-backend-k2d0.onrender.com/',
 });
 
 // This automatically intercepts every request and adds the token!
