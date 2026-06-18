@@ -12,7 +12,11 @@ dotenv.config();
 const app = express();
 const prisma = new PrismaClient();
 
-app.use(cors());
+app.use(cors({
+  // Use your live Vercel URL here
+  origin: 'https://mini-jira-lime.vercel.app', 
+  credentials: true
+}));
 app.use(express.json()); 
 
 app.get('/api/health', (req, res) => {
